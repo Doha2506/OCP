@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OCP.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,7 +9,7 @@ namespace OCP.Interfaces
 {
     internal interface IDiscountFactory
     {
-        IDiscountCalculator GetCalculator(string userType);
-        void Register(string userType, Func<IDiscountCalculator> factory);
+        IDiscountCalculator GetCalculator(UserType userType);
+        void Register(UserType userType, Func<IDiscountCalculator> factory);
     }
 }
